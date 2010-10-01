@@ -23,4 +23,26 @@ class LeaguesController < ApplicationController
     @title = @league.name
   end
   
+  def edit
+    @league = League.find(params[:id])
+  end
+  
+  def update
+    @league = League.find(params[:id])
+    if @league.update_attributes(params[:league])
+      flash[:notice] = "Successfully updated #{@league.name}."
+      redirect_to @league
+    else
+      flash[:alert] = "League update was unsuccessful."
+      render :action => :edit
+    end
+  end
+  
+  def destroy
+    @league = League.find(params[:id])
+    flash[:notice] = "#{@league.name} successfully deleted."
+    @league.destroy
+    redirect_to leagues_path
+  end
+  
 end

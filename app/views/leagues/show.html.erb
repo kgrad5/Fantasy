@@ -1,1 +1,4 @@
-<h>Welcome to <%= @league.name %>!</h>
+<h3><%= link_to "Home", "/leagues" %></h3>
+<h2>Welcome to <%= @league.name %>! 
+<%= link_to "Edit", edit_league_path %>
+<%= link_to "Delete" , @league, :method => :delete, :confirmation => "Are you sure you want to delete #{@league.name}?"%></h2>
