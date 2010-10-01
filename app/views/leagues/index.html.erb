@@ -1,0 +1,6 @@
+<h1><%= link_to "Add League", new_league_path %></h1>
+<ul>
+<% @leagues.each do |league|%>
+	<li><%= link_to league.name, league%></li>
+<% end %>
+</ul>

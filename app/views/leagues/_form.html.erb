@@ -1,0 +1,10 @@
+<% form_for(@league) do |f| %>
+<%= f.error_messages %>
+	<div>
+		<p>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</p>
+	</div>
+	<%= f.submit %>
+<% end %>
