@@ -6,7 +6,6 @@ Fantasy::Application.routes.draw do
     resources :players
   end
   
-  resources :players
   
  
   

@@ -8,8 +8,11 @@
 </div>
 
 <p>
-	<% @players.each do |player|%>
-		<li><%= link_to player.name, player%> <%= player.rank %></li>
+	<% @league.players.each do |player|%>
+		<li><%= link_to player.name, league_player_path(:league_id => @league.id, :player_id => player.id) %> <%= player.rank %></li>
 	<% end %>
-	<%= link_to "Add Player", new_league_player_path %>
+</p>
+<p>
+	Add a player:
+	<%= render :partial => "players/form" %>
 </p>

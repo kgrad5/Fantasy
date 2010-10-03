@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Fantasy::Application.config.session_store :cookie_store, :key => '_YAHLFantasy_session'
+Fantasy::Application.config.session_store :cookie_store, :key => '_Fantasy_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
