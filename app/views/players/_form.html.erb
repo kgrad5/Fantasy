@@ -1,0 +1,12 @@
+<% form_for(@league, @league.players.build) do |f| %>
+<%= f.error_messages %>
+	<div>
+		<p>
+			<%= f.label :name %>
+			<%= f.text_field :name %><br/>
+			<%= f.label :rank %>&nbsp;
+			<%= f.select :rank, ["A+", "A", "B+", "B", "C+", "C", "D"] %><br/>			
+		</p>
+	</div>
+	<%= f.submit %>
+<% end %>

@@ -1,4 +1,15 @@
-<h3><%= link_to "Home", "/leagues" %></h3>
-<h2>Welcome to <%= @league.name %>! 
-<%= link_to "Edit", edit_league_path %>
-<%= link_to "Delete" , @league, :method => :delete, :confirmation => "Are you sure you want to delete #{@league.name}?"%></h2>
+
+<%= stylesheet_link_tag 'league' %>
+<div>
+	<span id="league_name">Welcome to <%= link_to @league.name, edit_league_path %></span>
+	<span id="delete_link"> 
+		<%= link_to "Delete" , @league, :method => :delete, :confirmation => "Are you sure you want to delete 							#{@league.name}?"%>
+	</span>
+</div>
+
+<p>
+	<% @players.each do |player|%>
+		<li><%= link_to player.name, player%> <%= player.rank %></li>
+	<% end %>
+	<%= link_to "Add Player", new_player_path %>
+</p>
