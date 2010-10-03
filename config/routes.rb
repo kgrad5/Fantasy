@@ -2,8 +2,13 @@ Fantasy::Application.routes.draw do
   
   root :to => "leagues#index"
   
-  resources :leagues
+  resources :leagues do
+    resources :players
+  end
+  
   resources :players
+  
+ 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

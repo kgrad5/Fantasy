@@ -21,7 +21,7 @@ class LeaguesController < ApplicationController
   def show
     @league = League.find(params[:id])
     @title = @league.name
-    @players = Player.all
+    @players = @league.players.all
   end
   
   def edit

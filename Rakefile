@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-YAHLFantasy::Application.load_tasks
+Fantasy::Application.load_tasks

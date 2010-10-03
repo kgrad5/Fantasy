@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   end
   
   def new
-    @player = Player.new
+    @league = League.find(params[:league_id])
   end
   
   def create

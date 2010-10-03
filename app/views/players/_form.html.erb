@@ -1,4 +1,4 @@
-<% form_for(@league, @league.players.build) do |f| %>
+<% form_for([@league, @league.players.build]) do |f| %>
 <%= f.error_messages %>
 	<div>
 		<p>
