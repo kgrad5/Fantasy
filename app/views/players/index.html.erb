@@ -1,0 +1,5 @@
+<%= link_to "Mass update", "/leagues/#{@league.id}/all_players/edit" %>
+
+<% @league.players.each do |player|%>
+	<li><%= link_to player.name, edit_league_player_path(:league_id => @league.id, :id => player.id) %></li>
+<% end %>

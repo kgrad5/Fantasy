@@ -1,0 +1,18 @@
+<% form_for(@league) do |league| %>
+	<%= league.error_messages %>
+	<% league.fields_for :players do |f| %>
+		<div>
+			<p>
+				<%= f.label :name %>&nbsp;&nbsp;
+				<%= f.text_field :name %><br />
+				<%= f.label :rank %>&nbsp;&nbsp;&nbsp;
+				<%= f.select :rank, ["A+", "A", "B+", "B", "C+", "C", "D"]%><br />
+				<%= f.label :goals %>&nbsp;&nbsp;
+				<%= f.text_field :goals %><br />
+				<%= f.label :assists %>
+				<%= f.text_field :assists %>			
+			</p>
+		</div>
+	<% end %>
+	<%= league.submit %>
+<% end %>

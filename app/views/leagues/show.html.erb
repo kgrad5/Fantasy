@@ -3,9 +3,10 @@
 <div>
 	<span id="league_name">Welcome to <%= link_to @league.name, edit_league_path %></span>
 	<span id="delete_link"> 
-		<%= link_to "Delete" , @league, :method => :delete, :confirmation => "Are you sure you want to delete 							#{@league.name}?"%>
+		<%= link_to "Delete" , @league, :method => :delete, :confirm => "Are you sure you want to delete 							#{@league.name}?"%>
 	</span>
 </div>
+<div><%= link_to "Edit Player Stats", league_players_path(:league_id => @league.id) %></div>
 
 <p>
 	<% @league.players.each do |player|%>

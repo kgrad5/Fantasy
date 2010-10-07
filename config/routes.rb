@@ -3,11 +3,10 @@ Fantasy::Application.routes.draw do
   root :to => "leagues#index"
   
   resources :leagues do
-    resources :players
+    resources :players 
   end
   
-  
- 
+  get 'leagues/:league_id/all_players/edit', :controller => :players, :action => :edit_all
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
